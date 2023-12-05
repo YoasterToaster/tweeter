@@ -3,8 +3,15 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+
+ /* @import url('googleapis'); */
+ /* @import url('https://fonts.gstatic.com'); */
+ /* @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap'); */
+ html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Bungee', sans-serif; */
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -23,3 +30,39 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ /* General */
+
+ .wrapper{
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+ }
+
+ .imageContainer{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+ }
+
+.profileImage{
+  height: 400px;
+  min-width: 300px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+/* Tweets */
+
+.tweetForm{
+  margin-top: 40px;
+}
