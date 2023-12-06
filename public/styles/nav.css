@@ -24,12 +24,12 @@
 }
 
 .fa-angles-down {
-  transition: 15s;
+  transition: 1s;
   color: red;
 }
 
 .fa-angles-down:hover {
   background-color: lightgray;
   border-radius: 5px;
-  padding: 20000px;
+  padding: 20px;
 }

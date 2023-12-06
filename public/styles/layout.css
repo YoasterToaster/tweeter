@@ -18,10 +18,6 @@
   box-sizing: inherit;
 }
 
-p {
-  font-size: 10px;
-}
-
 /*
  * Global layout stuff
  */
@@ -30,6 +26,14 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+}
+
+p {
+  font-size: 10px;
+}
+
+h2{
+  padding-bottom: 50px;
 }
 
 /*
