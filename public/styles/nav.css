@@ -1,24 +1,35 @@
-nav{
+.nav {
   display: flex;
-  justify-content: center;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
   background-color: #4056A1;
   height: 120px;
   color: #FFFFFF;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
 
- .nav{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 1.5em;
-}
-
-.spanH1{
-  margin-right: 80%;
-}
-
-.nav p{
+.nav p {
   display: flex;
   justify-content: flex-end;
+}
+
+.navRight {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.fa-angles-down {
+  transition: 15s;
+  color: red;
+}
+
+.fa-angles-down:hover {
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 20000px;
 }

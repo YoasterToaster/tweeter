@@ -1,0 +1,59 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-left-tweet{
+  display: flex;
+  font-size: 30px;
+}
+
+.top-left-tweet p {
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.new-tweet button {
+  background-color: blue;
+  color: white;
+}
+
+#tweet-text {
+  overflow: hidden;
+  resize: none;
+  width: 100%;
+  border: none;
+  border-bottom: 4px solid;
+  background-color: transparent;
+}
+
+.finished-tweet-text{
+  border: none;
+  border-bottom: 4px solid;
+}
+
+.tweet-container {
+  display: flex;
+  flex-direction: column;
+  border: 6px solid;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  margin-top: 20px;
+  padding: 20px;
+}

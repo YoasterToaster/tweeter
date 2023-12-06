@@ -1,0 +1,25 @@
+header{
+  background-color: orange;
+  width: 100%;
+  background-image: url(../images/argyle.png);
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
+}
+
+.imageContainer{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+ }
+ .profileImage{
+  height: 400px;
+  min-width: 300px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
