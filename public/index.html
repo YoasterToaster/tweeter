@@ -21,7 +21,12 @@
   <link rel="stylesheet" href="/styles/main.css" type="text/css" />
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/2.0.2/timeago.min.js"
+  integrity="sha512-sl01o/gVwybF1FNzqO4NDRDNPJDupfN0o2+tMm4K2/nr35FjGlxlvXZ6kK6faa9zhXbnfLIXioHnExuwJdlTMA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -56,16 +61,17 @@
   <main class="main-container wrapper">
     <section class="new-tweet">
       <!-- <h2>Compose Tweet</h2> -->
-      <form><!-- method="POST" action="/tweets"-->
+      <form id="form" method="POST" action="/tweets"><!-- method="POST" action="/tweets"-->
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <div>
+        <div class="submit-form-footer">
           <button id="btn" type="submit">Tweet</button>
+          <p id="errorMessage"></p>
           <output id="counter" name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
 
-    <section class="tweet-container">
+    <!-- <section class="tweet-container">
       <div class="tweet-header">
         <div class="top-left-tweet">
           <i class="fa-solid fa-user"></i>
@@ -87,8 +93,7 @@
           <i class="fa-solid fa-heart"></i>
         </div>
       </div>
-    </section>
-
+    </section> -->
     <article id="art"></article>
   </main>
 </body>

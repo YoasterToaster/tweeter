@@ -9,5 +9,10 @@ $(document).ready(function() {
     $counter.text(140 - counter);
     // console.log(counter);
     // console.log('Key pressed:', event.key);
+    if (counter > 140){
+      $counter.css('color', 'red');
+    } else {
+      $counter.css('color', '#545149');
+    }
   });
 });

@@ -14,6 +14,11 @@
   justify-content: space-between;
 }
 
+.submit-form-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
 .top-left-tweet{
   display: flex;
   font-size: 30px;
@@ -47,6 +52,7 @@
 .finished-tweet-text{
   border: none;
   border-bottom: 4px solid;
+  word-wrap: break-word;
 }
 
 .tweet-container {
@@ -80,5 +86,9 @@
   transition: 0.5s;
 }
 .fa-heart:hover{
+  color: red;
+}
+
+#errorMessage{
   color: red;
 }
