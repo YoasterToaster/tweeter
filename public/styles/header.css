@@ -2,6 +2,7 @@ header{
   background-color: orange;
   width: 100%;
   background-image: url(../images/argyle.png);
+  
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
   /* background-attachment: fixed; */
@@ -10,16 +11,28 @@ header{
 .imageContainer{
   max-width: 100%;
   width: 100%;
-  height: auto;
+  /* height: auto; */
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 50px;
  }
+
  .profileImage{
-  height: 400px;
-  min-width: 300px;
+  height: auto;
+  min-width: 200px;
   margin-bottom: 40px;
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.headerImageContainer{
+  
+}
+
+
+@media only screen and (min-width: 1024px) {
+  header{
+    /* margin-top: 6em; */
+  }
 }

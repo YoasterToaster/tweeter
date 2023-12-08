@@ -26,7 +26,13 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+
 }
+
+/* img {
+  display: block;
+  height: auto;
+} */
 
 p {
   font-size: 10px;
@@ -34,6 +40,7 @@ p {
 
 h2{
   padding-bottom: 50px;
+  margin: 0;
 }
 
 /*
@@ -43,7 +50,7 @@ h2{
  /* General */
 
  .wrapper{
-  max-width: 100vw;
+  /* max-width: 100vw; */
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -55,7 +62,6 @@ h2 {
 
 main{
   width: 90vw;
-  margin: 0 auto;
 }
 
 
@@ -63,4 +69,11 @@ main{
 
 .tweetForm{
   margin-top: 40px;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    /* display: flex; */
+  }
+
 }

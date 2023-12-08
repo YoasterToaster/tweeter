@@ -6,10 +6,11 @@
   flex-wrap: wrap;
   width: 100%;
   background-color: #4056A1;
-  height: 120px;
+  height: 80px;
   color: #FFFFFF;
   padding-right: 1.5em;
   padding-left: 1.5em;
+  background: none;
 }
 
 .nav p {
