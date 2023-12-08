@@ -106,6 +106,8 @@ $(document).ready(function () {
   $('#form').on('submit', function (event) {
     const $textarea = $('#tweet-text');
     const $errorMessage = $('#errorMessage');
+    const $counter = $('#counter');
+
     event.preventDefault();
 
     if ($textarea.val().length >= 140) {
@@ -119,11 +121,12 @@ $(document).ready(function () {
         data: $(this).serialize()
       }).then(loadTweets)
         .catch((err) => console.log(err));
+        $counter.text('140')
       $textarea.val('');
       $errorMessage.text('');
     }
   });
 
-  const $button = $('#btn');
+  loadTweets();
 
 });

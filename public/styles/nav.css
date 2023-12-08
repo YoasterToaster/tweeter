@@ -1,11 +1,10 @@
-.nav {
+nav {
   display: flex;
   position: fixed;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #4056A1;
   height: 80px;
   color: #FFFFFF;
   padding-right: 1.5em;
@@ -33,4 +32,17 @@
   background-color: lightgray;
   border-radius: 5px;
   padding: 20px;
+}
+
+@media only screen and (min-width: 832px) {
+
+  nav {
+    background: initial;
+    background-color: #4056A1;
+  }
+  
+}
+
+@media only screen and (min-width: 1024px) {
+
 }
