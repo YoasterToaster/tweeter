@@ -1,3 +1,4 @@
+/* Navigation */
 nav {
   display: flex;
   position: fixed;
@@ -41,8 +42,4 @@ nav {
     background-color: #4056A1;
   }
   
-}
-
-@media only screen and (min-width: 1024px) {
-
 }

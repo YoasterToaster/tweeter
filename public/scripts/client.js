@@ -3,12 +3,10 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-// const timeagoInstance = timeago();
-// import { format, render, cancel, register } from 'timeago.js';
-
+//Imports
 const timeagoInstance = timeago();
 
+// Data Objects to test server with
 const tweetData = {
   "user": {
     "name": "Newton",
@@ -46,7 +44,7 @@ const objectData = [
     "created_at": 1461113959088
   }
 ]
-
+// Creates a tweet with all the html it needs
 const createTweetElement = (tweets) => {
   const tweetText = $(`    <section class="tweet-container">
       <div class="tweet-header">
@@ -74,7 +72,7 @@ const createTweetElement = (tweets) => {
 }
 
 
-
+// Renders the tweets
 const renderTweets = function (tweets) {
   // Empty the article so that we don't duplicate when we produce the updated list of posts
   $('#art').empty();
@@ -89,44 +87,60 @@ const renderTweets = function (tweets) {
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
 }
-
+// loads the tweets
 const loadTweets = (data) => {
   $.ajax({
     url: '/tweets',
     method: 'GET',
-    // data: $(this).serialize()
   }).then(renderTweets).catch((err) => console.log(err));
 }
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 
 $(document).ready(function () {
 
-  // renderTweets(objectData);
 
   $('#form').on('submit', function (event) {
+    // Declaring variables
+    event.preventDefault();
     const $textarea = $('#tweet-text');
     const $errorMessage = $('#errorMessage');
     const $counter = $('#counter');
 
-    event.preventDefault();
+    // Cross-Site Scripting
+    const sanitized = escape($textarea.val());
+    $textarea.val(escape($textarea.val()));
 
-    if ($textarea.val().length >= 140) {
+    // Edge cases
+    if (sanitized.length >= 140) {
+
       $errorMessage.text("Error: You must not exceed the character limit!");
-    } else if ($textarea.val() === '' || $textarea.val() === null) {
+
+    } else if (sanitized === '' || sanitized === null) {
+
       $errorMessage.text("Error: Your text is empty!");
+
     } else {
-      $.ajax({
+      // Sends data
+      $.ajax(console.log(this),{
         url: '/tweets',
         method: 'POST',
         data: $(this).serialize()
       }).then(loadTweets)
         .catch((err) => console.log(err));
-        $counter.text('140')
+
+        // Resets values
+      $counter.text('140')
       $textarea.val('');
       $errorMessage.text('');
     }
   });
-
+  // Loads tweets on page load
   loadTweets();
 
 });
