@@ -5,9 +5,9 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 It's like Twitter but not really!
-!["Have you ever wanted shorter urls?  Well look no further!"](https://github.com/YoasterToaster/tinyapp/blob/master/docs/urls.png)
+!["Have you ever wanted shorter urls?  Well look no further!"](https://github.com/YoasterToaster/tweeter/blob/master/docs/Highlights.png)
 Write texts until the end of time (or your server!)
-!["Register your email!"](https://github.com/YoasterToaster/tinyapp/blob/master/docs/register.png)
+!["Register your email!"](https://github.com/YoasterToaster/tweeter/blob/master/docs/Text.png)
 
 ## Getting Started
 
