@@ -113,28 +113,27 @@ $(document).ready(function () {
     const $counter = $('#counter');
 
     // Cross-Site Scripting
-    const sanitized = escape($textarea.val());
     $textarea.val(escape($textarea.val()));
 
     // Edge cases
-    if (sanitized.length >= 140) {
+    if ($textarea.val().length >= 140) {
 
       $errorMessage.text("Error: You must not exceed the character limit!");
 
-    } else if (sanitized === '' || sanitized === null) {
+    } else if ($textarea === '' || $textarea === null) {
 
       $errorMessage.text("Error: Your text is empty!");
 
     } else {
       // Sends data
-      $.ajax(console.log(this),{
+      $.ajax({
         url: '/tweets',
         method: 'POST',
         data: $(this).serialize()
       }).then(loadTweets)
         .catch((err) => console.log(err));
 
-        // Resets values
+      // Resets values
       $counter.text('140')
       $textarea.val('');
       $errorMessage.text('');

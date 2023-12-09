@@ -9,12 +9,12 @@ $(document).ready(function() {
   $($tweetText).on('keydown', function(event) {
     counter = $tweetText.val().length;
     $counter.text(140 - counter);
-    
+
     //changes color depending on value
     if (counter > 140){
-      $counter.css('color', 'red');
+      $counter.addClass("counter-red");
     } else {
-      $counter.css('color', '#545149');
+      $counter.removeClass("counter-red");
     }
   });
 });

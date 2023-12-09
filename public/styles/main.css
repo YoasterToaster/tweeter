@@ -66,6 +66,10 @@
   transition: 0.5s;
 }
 
+.counter-red{
+  color: red;
+}
+
 .tweet-container:hover{
   box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
 }
