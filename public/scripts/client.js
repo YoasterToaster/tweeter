@@ -1,49 +1,6 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 //Imports
 const timeagoInstance = timeago();
 
-// Data Objects to test server with
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@SirIsaac"
-  },
-  "content": {
-    "text": "If I have seen further it is by standing on the shoulders of giants"
-  },
-  "created_at": 1461116232227
-}
-
-const objectData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
 // Creates a tweet with all the html it needs
 const createTweetElement = (tweets) => {
   const tweetText = $(`    <section class="tweet-container">
@@ -95,6 +52,7 @@ const loadTweets = (data) => {
   }).then(renderTweets).catch((err) => console.log(err));
 }
 
+// Function for XSS prevention
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -103,7 +61,6 @@ const escape = function (str) {
 
 
 $(document).ready(function () {
-
 
   $('#form').on('submit', function (event) {
     // Declaring variables
