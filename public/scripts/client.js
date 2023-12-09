@@ -120,7 +120,7 @@ $(document).ready(function () {
 
       $errorMessage.text("Error: You must not exceed the character limit!");
 
-    } else if ($textarea === '' || $textarea === null) {
+    } else if ($textarea.val() === '' || $textarea.val() === null) {
 
       $errorMessage.text("Error: Your text is empty!");
 
