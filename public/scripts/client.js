@@ -116,7 +116,7 @@ $(document).ready(function () {
     $textarea.val(escape($textarea.val()));
 
     // Edge cases
-    if ($textarea.val().length >= 140) {
+    if ($textarea.val().length >= 141) {
 
       $errorMessage.text("Error: You must not exceed the character limit!");
 

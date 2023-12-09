@@ -6,7 +6,7 @@ $(document).ready(function() {
   $counter.text(counter);
 
   // Changes the counter on each keydown press
-  $($tweetText).on('keydown', function(event) {
+  $($tweetText).on('input', function(event) {
     counter = $tweetText.val().length;
     $counter.text(140 - counter);
 
